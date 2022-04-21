@@ -25,10 +25,10 @@
 		6. to shut down distro, run `wsl -t <DistributionName>` 
 		
 2. **Update WSL packages**:
-	1. to updates repositories, run `sudo apt update`
+	1. to update repositories, run `sudo apt update`
 	2. to check upgradable packages, run `apt list --upgradable`
 	3. to update all packages, run `sudo apt upgrade -y`
-	4. or run a one-liner: `sudo apt update && sudo apt upgrade -y`
+	4. or run a one-liner `sudo apt update && sudo apt upgrade -y`
 	
 3. **Install Python**:
 	1. to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2` (check [documentation](https://github.com/ilikenwf/apt-fast))
