@@ -40,7 +40,7 @@
 	3. to install Miniconda, run `bash Miniconda3-py39_4.11.0-Linux-x86_64.sh`
 	4. to install mamba, run `conda install -y mamba -n base -c conda-forge`
 	5. to activate mamba, run `mamba init` and open a new terminal
-	6. to install mamba autocompletion, run `mamba install -y -c conda-forge mamba-bash-completion` and open a new terminal.
+	6. to install mamba autocompletion, run `mamba install -y -c conda-forge mamba-bash-completion` and open a new terminal
 	7. to create environment, run `mamba create -y -n <MyEnv> python=3.9`
 	8. to activate environment, run `mamba activate <MyEnv>`
 	9. to install packages, run `mamba install -y numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow`
