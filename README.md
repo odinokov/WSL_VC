@@ -30,7 +30,7 @@
 	3. to update all packages, run `sudo apt upgrade -y`
 	4. or run a one-liner: `sudo apt update && sudo apt upgrade -y`
 	
-3. **Install Python**
+3. **Install Python**:
 	1. to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2` (check [documentation](https://github.com/ilikenwf/apt-fast))
 	2. to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
 
@@ -47,7 +47,7 @@
 	10. `mamba install -y scikit-learn-intelex` [check documentation](https://intel.github.io/scikit-learn-intelex). Basic use `from sklearnex import patch_sklearn; patch_sklearn()`
 	11. `mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4`
 
-5. **Install Visual Studio Code**
+5. **Install Visual Studio Code**:
 	1. [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
 	2. to open a  WSL terminal window, run `wsl` in PowerShell
 	3. to navigate to a user's home folder, run `cd home/<UserName>`
