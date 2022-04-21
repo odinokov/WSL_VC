@@ -25,7 +25,7 @@
 		6. to shut down distro, run `wsl -t <DistributionName>` 
 		
 2. **Update WSL packages**:
-	1. to updates repositories, run `sudo  apt update`
+	1. to updates repositories, run `sudo apt update`
 	2. to check upgradable packages, run `apt list --upgradable`
 	3. to update all packages, run `sudo apt upgrade -y`
 	4. or run a one-liner: `sudo apt update && sudo apt upgrade -y`
