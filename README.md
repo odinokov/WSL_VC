@@ -32,7 +32,7 @@
 	4. or run a one-liner `sudo apt update && sudo apt upgrade -y`
 	
 3. **Install Python**:
-	1. to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2` (check [documentation](https://github.com/ilikenwf/apt-fast))
+	1. to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. Check [documentation](https://github.com/ilikenwf/apt-fast) for more details
 	2. to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
 
 4. **Install mamba**:
