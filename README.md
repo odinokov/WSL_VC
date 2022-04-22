@@ -62,4 +62,4 @@
 	7. to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
 	8. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {} \;`
 	9. run `export PATH="$HOME/bin:$PATH"`
-	10. Use VS Code normally
+	10. use VS Code normally
