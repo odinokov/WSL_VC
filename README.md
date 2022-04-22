@@ -1,10 +1,10 @@
-## How to install WSL and Visual Studio Code on Windows
+## Walkthrough: how to install WSL and Visual Studio Code on Windows
 
 1. **Install WSL**:
 	1. press **`Win Key` +` R`**
 	2. type in `powershell` in a pop up window and press **Ctrl+Shift+Enter** or press and hold **`Ctrl` + `Shift`** and click **OK** to make PowerShell run as administrator
 	4. to get the exact name for the installed distros, run `wsl -l -v`
-	6. [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines (check your machine's CPU by running `systeminfo | find "System Type"` )
+	6. [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
 	7. to set the default version of WSL to WSL 2, run `wsl --set-default-version 2`
 	8. if need to delete the any distro, run  `wsl --unregister <DistributionName>`
 	9. run `wsl --list --online`  or  `wsl -l -o` to see a list of distros available for installation.
