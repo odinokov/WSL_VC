@@ -3,18 +3,24 @@
 1. **Install WSL**:
 	1. press **`Win Key` +` R`**
 	2. type in `powershell` in a pop up window and press **Ctrl+Shift+Enter** or press and hold **`Ctrl` + `Shift`** and click **OK** to make PowerShell run as administrator
+	3. to enable Virtual Machine Platform and Windows Subsystem for Linux, run 
+	
+	`dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+	
+	`dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart` and restart PC
+
 	4. to get the exact name for the installed distros, run `wsl -l -v`
-	6. [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
-	7. to set the default version of WSL to WSL 2, run `wsl --set-default-version 2`
-	8. if need to delete the any distro, run  `wsl --unregister <DistributionName>`
-	9. run `wsl --list --online`  or  `wsl -l -o` to see a list of distros available for installation.
-	10. run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
-	11. if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
-	12. enter a user name and password
+	5. [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
+	6. to set the default version of WSL to WSL 2, run `wsl --set-default-version 2`
+	7. if need to delete the any distro, run  `wsl --unregister <DistributionName>`
+	8. run `wsl --list --online`  or  `wsl -l -o` to see a list of distros available for installation.
+	9. run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
+	10. if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
+	11. enter a user name and password
 	
 	![image](./img/PowerShell.png)
 	
-	14. to reset password:
+	12. to reset password:
 		1. check the distro app name:
 			* for **Ubuntu**, use `ubuntu`
 			* for **Ubuntu 20.04**, use `ubuntu2004`
