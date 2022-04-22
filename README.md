@@ -11,7 +11,9 @@
 	10. run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
 	11. if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
 	12. enter a user name and password
+	
 	![image](./img/PowerShell.png)
+	
 	14. to reset password:
 		1. check the distro app name:
 			* for **Ubuntu**, use `ubuntu`
@@ -54,7 +56,9 @@
 	3. to navigate to a user's home folder, run `cd home/<UserName>`
 	4. to view the current directory in Windows File Explorer, run `exporer.exe .`
 	5. to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
+	
 	![image](./img/WSL_VS_Code.png)
+	
 	7. to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
 	8. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {}  \;`
 	9. Use VS Code normally
