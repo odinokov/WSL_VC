@@ -11,7 +11,8 @@
 	10. run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
 	11. if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
 	12. enter a user name and password
-	13. to reset password:
+	![image](./img/PowerShell.png)
+	14. to reset password:
 		1. check the distro app name:
 			* for **Ubuntu**, use `ubuntu`
 			* for **Ubuntu 20.04**, use `ubuntu2004`
@@ -44,8 +45,8 @@
 	7. to create environment, run `mamba create -y -n <MyEnv> python=3.9`
 	8. to activate environment, run `mamba activate <MyEnv>`
 	9. to install packages, run `mamba install -y numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow`
-	10. `mamba install -y scikit-learn-intelex` [check documentation](https://intel.github.io/scikit-learn-intelex). Basic use `from sklearnex import patch_sklearn; patch_sklearn()`
-	11. `mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4`
+	10. `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, check [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
+	11. to install additional packages, run`mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4`
 
 5. **Install Visual Studio Code**:
 	1. [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
@@ -53,6 +54,7 @@
 	3. to navigate to a user's home folder, run `cd home/<UserName>`
 	4. to view the current directory in Windows File Explorer, run `exporer.exe .`
 	5. to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
-	6. to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
-	7. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {}  \;`
-	8. Use VS Code normally
+	![image](./img/WSL_VS_Code.png)
+	7. to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
+	8. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {}  \;`
+	9. Use VS Code normally
