@@ -1,4 +1,4 @@
-## How to install WSL and Visual Studio on Windows
+## How to install WSL and Visual Studio Code on Windows
 
 1. **Install WSL**:
 	1. press **`Win Key` +` R`**
