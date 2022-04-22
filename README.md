@@ -48,7 +48,7 @@
 	8. to activate environment, run `mamba activate <MyEnv>`
 	9. to install packages, run `mamba install -y numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow`
 	10. `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
-	11. to install additional packages, run`mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4`
+	11. to install additional packages, run `mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4`
 
 5. **Install Visual Studio Code**:
 	1. [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
