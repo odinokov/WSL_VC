@@ -60,5 +60,5 @@
 	![image](./img/WSL_VS_Code.png)
 	
 	7. to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
-	8. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {}  \;`
+	8. to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {} \;`
 	9. Use VS Code normally
