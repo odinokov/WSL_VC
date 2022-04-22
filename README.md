@@ -52,7 +52,7 @@
 
 5. **Install Visual Studio Code**:
 	1. [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
-	2. to open a  WSL terminal window, run `wsl` in PowerShell
+	2. to open a WSL terminal window, run `wsl` in PowerShell
 	3. to navigate to a user's home folder, run `cd home/<UserName>`
 	4. to view the current directory in Windows File Explorer, run `exporer.exe .`
 	5. to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
