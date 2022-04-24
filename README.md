@@ -7,7 +7,7 @@
 	
 	`dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
 	
-	`dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart` and restart PC
+	`dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`, restart PC and open PowerShell again
 
 	4. to get the exact name for the installed distros, run `wsl -l -v`
 	5. [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
