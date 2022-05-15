@@ -1,5 +1,7 @@
 ## Walkthrough: how to install WSL and Visual Studio Code on Windows
 
+**Prerequirements: updated Windows 10/11 and enabled virtualization in BIOS.**
+
 1.  **Install WSL**:
     1.  press **`Win Key` + `R`**
     2.  type in `powershell` in a pop up window and press **Ctrl+Shift+Enter** or press and hold **`Ctrl` + `Shift`** and click **OK** to make PowerShell run as administrator
