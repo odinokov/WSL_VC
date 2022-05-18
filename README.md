@@ -38,7 +38,7 @@
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
-    3.  to installl the build-essential packages run `sudo apt-fast install -y build-essential`
+    3.  to installl the build-essential and graphviz packages run `sudo apt-fast install -y build-essential graphviz`
 
 4.  **Install mamba**:
     1.  to download Miniconda, run `cd ~ && aria2c https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh`
@@ -51,7 +51,7 @@
     8.  to activate environment, run `mamba activate <MyEnv>`
     9.  to install packages, run `mamba install -y joblib numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow`
     10.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
-    11.  to install additional packages, run `mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
+    11.  to install additional packages, run `mamba install -y -c conda-forge umap-learn sktime-all-extras pybedtools pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
     12.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
     13.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
     14.  to install R base run `sudo apt-fast install -y r-base`
