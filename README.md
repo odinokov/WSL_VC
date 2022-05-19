@@ -56,7 +56,12 @@
     13.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
     14.  to install R base run `sudo apt-fast install -y r-base`
 
-5.  **Install Visual Studio Code**:
+5.  **Backup WSL**:
+    1.  Run `wsl -l -v' in PowerShell to get a full list of the installed distributions.
+    2.  Run `wsl --export <distro> <filename.tar>)' to backup specific distribution.
+    3.  Run `wsl --import <distro name> <distro location> <filename.tar>` to import a previously exported distribution.
+
+6.  **Install Visual Studio Code**:
     1.  [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
     2.  to open a WSL terminal window, run `wsl` in PowerShell
     3.  to navigate to a user's home folder, run `cd home/<UserName>`
