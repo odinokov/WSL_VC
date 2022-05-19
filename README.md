@@ -57,8 +57,8 @@
     14.  to install R base run `sudo apt-fast install -y r-base`
 
 5.  **Backup WSL**:
-    1.  Run `wsl -l -v' in PowerShell to get a full list of the installed distributions.
-    2.  Run `wsl --export <distro> <filename.tar>)' to backup specific distribution.
+    1.  Run `wsl -l -v` in PowerShell to get a full list of the installed distributions.
+    2.  Run `wsl --export <distro> <filename.tar>)` to backup specific distribution.
     3.  Run `wsl --import <distro name> <distro location> <filename.tar>` to import a previously exported distribution.
 
 6.  **Install Visual Studio Code**:
