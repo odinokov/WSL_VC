@@ -39,6 +39,7 @@
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
     3.  to installl the build-essential and graphviz packages run `sudo apt-fast install -y build-essential graphviz`
+    4.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
 4.  **Install mamba**:
     1.  to download Miniconda, run `cd ~ && aria2c https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh`
