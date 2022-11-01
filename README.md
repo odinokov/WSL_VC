@@ -33,7 +33,7 @@
     1.  to update repositories, run `sudo apt update`
     2.  to check upgradable packages, run `apt list --upgradable`
     3.  to update all packages, run `sudo apt upgrade -y`
-    4.  or run a one-liner `sudo apt update && sudo apt upgrade -y`
+    4.  or run a one-liner `sudo apt update && sudo apt upgrade -y` (run `echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null` if 'Temporary failure resolving…' error occurs)
 
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
