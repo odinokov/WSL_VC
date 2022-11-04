@@ -18,7 +18,7 @@
     11.  enter a user name and password[![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/PowerShell.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/PowerShell.png)
     12.  to reset password:
         1.  check the distro app name:
-	        - for **Ubuntu**, use `ubuntu`
+	    - for **Ubuntu**, use `ubuntu`
             -   for **Ubuntu 20.04**, use `ubuntu2004`
             -   for **Ubuntu 18.04**, use `ubuntu1804`
             -   for **Debian**, use `debian`
@@ -52,7 +52,7 @@
     8.  to activate environment, run `mamba activate <MyEnv>`
     9.  to install packages, run `mamba install -y joblib numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow tensorflow-probability`
     10.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
-    11.  to install additional packages, run `mamba install -y -c conda-forge umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, ``mamba install -y -c bioconda pysam pybedtools`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
+    11.  to install additional packages, run `mamba install -y -c conda-forge umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda pysam pybedtools`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
     12.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
     13.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
     14.  to install R base run `sudo apt-fast install -y r-base`
@@ -67,6 +67,7 @@
     2.  to open a WSL terminal window, run `wsl` in PowerShell
     3.  to navigate to a user's home folder, run `cd home/<UserName>`
     4.  to view the current directory in Windows File Explorer, run `exporer.exe .`
+    5.  enable WSL extension as described here: https://code.visualstudio.com/docs/remote/wsl-tutorial
     5.  to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
     [![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/WSL_VS_Code.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/WSL_VS_Code.png)
     6.  to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
