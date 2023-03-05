@@ -56,7 +56,7 @@
     12.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
     13.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
     14.  to install R base run `sudo apt-fast install -y r-base`
-    15.  to backup <MyEnv> run `tar -I "crabz -l9 -p4 | pv" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to="${PWD}" "${CONDA_PREFIX}/envs/")`
+    15.  to backup `<MyEnv>` run `tar -I "crabz -l9 -p4 | pv" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to="${PWD}" "${CONDA_PREFIX}/envs/")`
 
 5.  **Backup WSL**:
     1.  Run `wsl -l -v` in PowerShell to get a full list of the installed distributions.
