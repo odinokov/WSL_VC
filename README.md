@@ -38,7 +38,7 @@
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
-    3.  to installl the build-essential and graphviz packages run `sudo apt-fast install -y build-essential graphviz`
+    3.  to installl the build-essential, run `sudo apt-fast install -y build-essential`
     4.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
 4.  **Install mamba**:
@@ -48,13 +48,14 @@
     4.  to create environment, run `mamba create -y -n <MyEnv> python=3.9`
     5.  to activate environment, run `mamba activate <MyEnv>`
     6.  to install font-manager and Microsoft's TrueType core fonts, run `conda install -y -c conda-forge fonts-conda-forge mscorefonts`
-    7.  to install other packages, run `mamba install -y joblib numba numpy pandas ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow tensorflow-probability`
-    8.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
-    9.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda pysam pybedtools datamash aria2c`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
-    10.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
-    11.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
-    12.  to install R base run `sudo apt-fast install -y r-base`
-    13.  to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
+    7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
+    8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge -c feather-format pyreadstat beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow tensorflow-probability`
+    9.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
+    10.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda pysam pybedtools datamash aria2c`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
+    11.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
+    12.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
+    13.  to install R base run `sudo apt-fast install -y r-base`
+    14.  to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
 
 5.  **Backup WSL**:
     1.  Run `wsl -l -v` in PowerShell to get a full list of the installed distributions.
