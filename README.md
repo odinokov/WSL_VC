@@ -38,8 +38,9 @@
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
-    3.  to installl the build-essential, run `sudo apt-fast install -y build-essential`
-    4.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
+    3.  to install LaTeX packages `sudo apt-fast install -y texlive texlive-latex-extra texlive-generic-extra pandoc`
+    4.  to installl the build-essential, run `sudo apt-fast install -y build-essential`
+    5.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
 4.  **Install mamba**:
     1.  to download Miniconda, run `cd ~ && aria2c "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh" && bash Mambaforge-$(uname)-$(uname -m).sh`
@@ -49,7 +50,7 @@
     5.  to activate environment, run `mamba activate <MyEnv>`
     6.  to install font-manager and Microsoft's TrueType core fonts, run `conda install -y -c conda-forge fonts-conda-forge mscorefonts`
     7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
-    8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge -c feather-format pyreadstat beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow tensorflow-probability`
+    8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge -c feather-format nbconvert nbformat jinja2 pyreadstat beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy ipython scikit-learn jupyter scipy matplotlib seaborn statsmodels openpyxl tensorflow tensorflow-probability`
     9.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
     10.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda pysam pybedtools datamash aria2c`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
     11.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
