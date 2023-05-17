@@ -38,7 +38,7 @@
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.9 python3-pip ipython3`
-    3.  to install LaTeX packages `sudo apt-fast install -y texlive texlive-latex-extra texlive-generic-extra pandoc` (and `sudo apt-fast install texlive-xetex texlive-fonts-recommended texlive-plain-generic`)
+    3.  to install LaTeX packages `sudo apt-fast install -y texlive texlive-latex-extra texlive-generic-extra texlive-xetex texlive-fonts-recommended pandoc` (try `sudo apt-fast install texlive-plain-generic`)
     4.  to installl the build-essential, run `sudo apt-fast install -y build-essential`
     5.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
