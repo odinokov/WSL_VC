@@ -48,7 +48,7 @@
     3.  to install mamba autocompletion, run `mamba install -y -c conda-forge mamba-bash-completion` and open a new terminal
     4.  to create environment, run `mamba create -y -n <MyEnv> python=3.9`
     5.  to activate environment, run `mamba activate <MyEnv>`
-    6.  to install font-manager and Microsoft's TrueType core fonts, run `conda install -y -c conda-forge fonts-conda-forge mscorefonts`
+    6.  to install font-manager and Microsoft's TrueType core fonts, run `mamba install -y -c conda-forge fonts-conda-forge mscorefonts`
     7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
     8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge -c feather-format jupyter_server nbconvert nbformat jinja2 pyreadstat statannot beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy numexpr ipython scikit-learn jupyter scipy matplotlib seaborn adjusttext statsmodels openpyxl tensorflow tensorflow-probability`
     9.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
