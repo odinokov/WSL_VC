@@ -50,20 +50,32 @@
     5.  to activate environment, run `mamba activate <MyEnv>`
     6.  to install font-manager and Microsoft's TrueType core fonts, run `mamba install -y -c conda-forge fonts-conda-forge mscorefonts`
     7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
-    8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge -c feather-format jupyter_server nbconvert nbformat jinja2 pyreadstat statannot beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy numexpr ipython scikit-learn jupyter scipy matplotlib seaborn adjusttext statsmodels openpyxl xlrd tensorflow tensorflow-probability`
+    8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge jupyter_server nbconvert nbformat jinja2 pyreadstat statannot beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy numexpr ipython scikit-learn jupyter scipy matplotlib seaborn adjusttext statsmodels openpyxl xlrd tensorflow`
     9.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
-    10.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda mosdepth d4tools bedops gget gseapy pysam pybedtools datamash aria2c ucsc-bedgraphtobigwig`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`
-    11.  to install the dependencies necessary to add a new repository over HTTPS run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
-    12.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
-    13.  to install R base run `sudo apt-fast install -y r-base`
-    14.  to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
+    10.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda mosdepth d4tools bedops gget gseapy pysam pybedtools datamash aria2c ucsc-bedgraphtobigwig`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`, , `pip install feather-format`
+    11.   to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
 
-5.  **Backup WSL**:
+5.  **Install R**:
+    1.  to install the dependencies necessary to add a new repository over HTTPS, run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
+    2.  to add the CRAN repository to your system sources’ list run `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'`
+    3.  to install the R base run `sudo apt-fast install -y r-base`
+    4.  Install `gdebi` for Debian packages and dependencies `sudo apt-fast install gdebi-core`
+    5.  Get RStudio `wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.04.2-764-amd64.deb`
+    6.  Istall RStudio `sudo gdebi rstudio-server-2024.04.2-764-amd64.deb`
+    7.  Run RStudo `sudo systemctl start rstudio-server`, open a web browser in Windows and go to http://localhost:8787.
+    8.  Stop RStudio `sudo systemctl stop rstudio-server` or to prevent autistart `sudo systemctl disable rstudio-server`
+
+
+
+
+  
+       
+6.  **Backup WSL**:
     1.  Run `wsl -l -v` in PowerShell to get a full list of the installed distributions.
     2.  Run `wsl --export <distro> <filename.tar>` to backup specific distribution.
     3.  Run `wsl --import <distro name> <distro location> <filename.tar>` to import a previously exported distribution.
 
-6.  **Install Visual Studio Code**:
+7.  **Install Visual Studio Code**:
     1.  [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
     2.  to open a WSL terminal window, run `wsl` in PowerShell
     3.  to navigate to a user's home folder, run `cd home/<UserName>`
