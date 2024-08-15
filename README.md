@@ -3,16 +3,16 @@
 **Prerequisites: updated Windows 10/11 and enabled virtualization in BIOS.**
 
 1.  **Install WSL**:
-    1.  press **`Win Key` + `R`**
-    2.  type in `powershell` in a pop up window and press **Ctrl+Shift+Enter** or press and hold **`Ctrl` + `Shift`** and click **OK** to make PowerShell run as administrator
-    3.  to enable Virtual Machine Platform and Windows Subsystem for Linux, run
+    1.  press **`Win Key` + `R`** and type in `powershell` in a pop up window and press **`Ctrl` + `Shift` + `Enter`** or press and hold **`Ctrl` + `Shift`** and click **`OK`** to make PowerShell run as administrator
+    2.  to enable Virtual Machine Platform and Windows Subsystem for Linux, run
 	    - `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
 	    -  `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`, restart PC and open PowerShell again
-    4.  to get the exact name for the installed distros, run `wsl -l -v`
-    5.  [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
-    6.  to set the default version of WSL to WSL 2, run `wsl --set-default-version 2`
-    7.  if need to delete the any distro, run  `wsl --unregister <DistributionName>`
-    8.  run `wsl --list --online`  or  `wsl -l -o` to see a list of distros available for installation.
+    3.  [download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the WSL2 Linux kernel update package for x64 machines. To check your machine's CPU, run `systeminfo | find "System Type"` in PowerShell
+    4.  to set the default version of WSL to WSL 2, run `wsl --set-default-version 2`
+    5.  check [WSLDL](https://github.com/yuk7/wsldl), a lightweight, portable launcher and installer for WSL/WSL2 installer. It enables Windows users to install and manage [custom Linux distributions](https://cloud-images.ubuntu.com/wsl/noble/current/), which are not available in the Microsoft Store.
+    6.  or run `wsl --list --online`  or  `wsl -l -o` to see a list of distros available for installation.
+    7.  to get the exact name for the installed distros, run `wsl -l -v`
+    8.  if need to delete the any distro, run  `wsl --unregister <DistributionName>`
     9.  run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
     10.  if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
     11.  enter a user name and password[![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/PowerShell.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/PowerShell.png)
