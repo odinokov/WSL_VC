@@ -17,12 +17,12 @@
     10.  if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
     11.  enter a user name and password[![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/PowerShell.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/PowerShell.png)
     12.  to reset password:
-        1.  to check the distro app name, run `wsl -l -v` in PowerShell
-        2.  to set root as a default user, run `<DistributionName> config --default-user root` in PowerShell
-        3.  check the username by running `ls /home` in WSL
-        4.  create a new password for user `passwd <UserName>`
-        5.  to set the default user, run `ubuntu config --default-user <UserName>` in PowerShell
-        6.  to shut down distro, run `wsl -t <DistributionName>`
+            -  to check the distro app name, run `wsl -l -v` in PowerShell
+            -  to set root as a default user, run `<DistributionName> config --default-user root` in PowerShell
+            -  check the username by running `ls /home` in WSL
+            -  create a new password for user `passwd <UserName>`
+            -  to set the default user, run `ubuntu config --default-user <UserName>` in PowerShell
+            -  to shut down distro, run `wsl -t <DistributionName>`
 
 2.  **Update WSL packages**:
     1.  to update repositories, run `sudo apt update`
