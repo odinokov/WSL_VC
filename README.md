@@ -17,16 +17,11 @@
     10.  if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
     11.  enter a user name and password[![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/PowerShell.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/PowerShell.png)
     12.  to reset password:
-        1.  check the distro app name:
-	    - for **Ubuntu**, use `ubuntu`
-            -   for **Ubuntu 20.04**, use `ubuntu2004`
-            -   for **Ubuntu 18.04**, use `ubuntu1804`
-            -   for **Debian**, use `debian`
-            -   for **Kali Linux**, use `kali`
-        2.  to set root as a default user, run `ubuntu2004 config --default-user root` in PowerShell
+        1.  to check the distro app name, run `wsl -l -v` in PowerShell
+        2.  to set root as a default user, run `<DistributionName> config --default-user root` in PowerShell
         3.  check the username by running `ls /home` in WSL
         4.  create a new password for user `passwd <UserName>`
-        5.  to set default user, run `ubuntu config --default-user <UserName>` in PowerShell
+        5.  to set the default user, run `ubuntu config --default-user <UserName>` in PowerShell
         6.  to shut down distro, run `wsl -t <DistributionName>`
 
 2.  **Update WSL packages**:
@@ -37,23 +32,23 @@
 
 3.  **Install Python**:
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
-    2.  to install Python, run `sudo apt-fast install -y python3.10 python3-pip ipython3`
+    2.  to install Python, run `sudo apt-fast install -y python3.12 python3-pip ipython3`
     3.  to install LaTeX packages `sudo apt-fast install -y dvipng cm-super texlive texlive-latex-extra texlive-xetex texlive-fonts-recommended pandoc` (try `sudo apt-fast install texlive-plain-generic`)
-    4.  to installl the build-essential, run `sudo apt-fast install -y build-essential`
+    4.  to installl the build-essential, run `sudo apt-fast install -y build-essential libcurl4-openssl-dev libssl-dev libxml2-dev`
     5.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
 4.  **Install mamba**:
     1.  to download Miniconda, run `cd ~ && aria2c "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh" && bash Mambaforge-$(uname)-$(uname -m).sh`
     2.  to activate mamba, run `mamba init` and open a new terminal
     3.  to install mamba autocompletion, run `mamba install -y -c conda-forge mamba-bash-completion` and open a new terminal
-    4.  to create environment, run `mamba create -y -n <MyEnv> python=3.9`
+    4.  to create environment, run `mamba create -y -n <MyEnv> python=3.12`
     5.  to activate environment, run `mamba activate <MyEnv>`
     6.  to install font-manager and Microsoft's TrueType core fonts, run `mamba install -y -c conda-forge fonts-conda-forge mscorefonts`
     7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
     8.  to install other packages, run `mamba install -y -c anaconda -c conda-forge jupyter_server nbconvert nbformat jinja2 pyreadstat statannot beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy numexpr ipython scikit-learn jupyter scipy matplotlib seaborn adjusttext statsmodels openpyxl xlrd tensorflow`
     9.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
     10.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda mosdepth d4tools bedops gget gseapy pysam pybedtools datamash aria2c ucsc-bedgraphtobigwig`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`, `pip install feather-format`
-    11.   to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -cf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
+    11.   to backup `<MyEnv>` run `P=${CONDA_PREFIX}/envs/; tar -I "pv -s $(du -sb ${P} | cut -f1)| crabz -l9 -p4" -chf ~/backup_env_"$(date +"%Y_%m_%d_%I_%M_%p")".tar.gz $(realpath --relative-to=${PWD} ${P})`
 
 5.  **Install R**:
     1.  to install the dependencies necessary to add a new repository over HTTPS, run `sudo apt-fast install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common`
@@ -65,11 +60,6 @@
     7.  Run RStudo `sudo systemctl start rstudio-server`, open a web browser in Windows and go to http://localhost:8787.
     8.  Stop RStudio `sudo systemctl stop rstudio-server` or to prevent autistart `sudo systemctl disable rstudio-server`
 
-
-
-
-  
-       
 6.  **Backup WSL**:
     1.  Run `wsl -l -v` in PowerShell to get a full list of the installed distributions.
     2.  Run `wsl --export <distro> <filename.tar>` to backup specific distribution.
