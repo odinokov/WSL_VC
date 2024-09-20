@@ -16,7 +16,8 @@
     9.  run `wsl --install -d <DistributionName>`  to install a required distro, i.e., `wsl --install -d Ubuntu-20.04`
     10.  if needed to change wsl version `wsl -s <DistributionName>`  or  `wsl --setdefault <DistributionName>`
     11.  enter a user name and password[![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/PowerShell.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/PowerShell.png)
-    12.  to reset password:
+    12.  install [WinSSHTerm](https://winsshterm.blogspot.com) - a tabbed SSH client for Windows that integrates PuTTY, WinSCP, and VcXsrv into a single interface. It simplifies remote server management by allowing secure terminal sessions, file transfers, and remote graphical applications within one tool. WinSSHTerm also supports terminal customization through reg files (https://github.com/AlexAkulov/putty-color-themes, https://github.com/aniskop/ssh-themes) and automates the installation and startup of the Windows Subsystem for Linux [(WSL)](https://github.com/WinSSHTerm/WSL_Starter). Moreover, the 3rd party [Migrate2WinSSHTerm tool](https://github.com/P-St/Migrate2WinSSHTerm) can facilitate the migration of existing configurations from PuTTY, MobaXterm, Xsell and other SHH clients to WinSSHTerm [5].
+    13.  to reset password:
             -  to check the distro app name, run `wsl -l -v` in PowerShell
             -  to set root as a default user, run `<DistributionName> config --default-user root` in PowerShell
             -  check the username by running `ls /home` in WSL
@@ -109,8 +110,10 @@
     4.  to view the current directory in Windows File Explorer, run `exporer.exe .`
     5.  enable WSL extension as described here: https://code.visualstudio.com/docs/remote/wsl-tutorial
     5.  to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
+       
     [![image](https://github.com/odinokov/WSL_VS_Code/raw/main/img/WSL_VS_Code.png)](https://github.com/odinokov/WSL_VS_Code/blob/main/img/WSL_VS_Code.png)
-    6.  to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
-    7.  to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {} \;`
-    8.  run `export PATH="$HOME/bin:$PATH"`
-    9.  use VS Code normally
+
+    7.  to create new terminal, press **`Ctrl` + `Shift` + `` ` ``**
+    8.  to provide user with sufficient permissions to write to files, run `sudo find /home/ -type d -user root -exec sudo chown -R $USER: {} \;`
+    9.  run `export PATH="$HOME/bin:$PATH"`
+    10.  use VS Code normally
