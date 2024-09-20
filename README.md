@@ -63,7 +63,7 @@
     3.  to install the R base run `sudo apt-fast install -y r-base`
     4.  Install `gdebi` for Debian packages and dependencies `sudo apt-fast install gdebi-core`
     5.  Get RStudio `wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2024.04.2-764-amd64.deb`
-    6.  Istall RStudio `sudo gdebi rstudio-server-2024.04.2-764-amd64.deb`
+    6.  Install RStudio `sudo gdebi rstudio-server-2024.04.2-764-amd64.deb`
     7.  Run RStudo `sudo systemctl start rstudio-server`, open a web browser in Windows and go to http://localhost:8787.
     8.  Stop RStudio `sudo systemctl stop rstudio-server` or to prevent autistart `sudo systemctl disable rstudio-server`
     9.  In RStudio:
