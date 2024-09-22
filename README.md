@@ -38,7 +38,7 @@
     4.  to install the build-essential, run `sudo apt-fast install -y build-essential libcurl4-openssl-dev libssl-dev libxml2-dev`
     5.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
-4.  **Install Fish Shell**:
+4.  **Install Fish Shell (not POSIX-Compliant shell)**:
     1. `sudo apt-add-repository ppa:fish-shell/release-3 && sudo apt update && sudo apt upgrade -y && sudo apt-fast install fish tmux`
     2. `echo "set-option -g default-shell /usr/bin/fish" > ~/.tmux.conf & echo "set -sg escape-time 10 # for vim" >> ~/.tmux.conf`
     3. `tmux source-file ~/.tmux.conf`
