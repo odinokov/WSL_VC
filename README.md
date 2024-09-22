@@ -35,11 +35,11 @@
     1.  to improve apt download time, run `sudo add-apt-repository -y ppa:apt-fast/stable && sudo apt-get update && sudo apt-get -y install apt-fast aria2`. [Check documentation](https://github.com/ilikenwf/apt-fast) for more details
     2.  to install Python, run `sudo apt-fast install -y python3.12 python3-pip ipython3`
     3.  to install LaTeX packages `sudo apt-fast install -y dvipng cm-super texlive texlive-latex-extra texlive-xetex texlive-fonts-recommended pandoc` (try `sudo apt-fast install texlive-plain-generic`)
-    4.  to installl the build-essential, run `sudo apt-fast install -y build-essential libcurl4-openssl-dev libssl-dev libxml2-dev`
+    4.  to install the build-essential, run `sudo apt-fast install -y build-essential libcurl4-openssl-dev libssl-dev libxml2-dev`
     5.  to sync time run `sudo hwclock -s` or `sudo apt-fast -y install ntpdate && sudo ntpdate pool.ntp.org`
 
 4.  **Install Fish Shell**:
-    1. `sudo apt-add-repository ppa:fish-shell/release-3 && sudo apt update && sudo apt upgrade -y && sudo apt-fast install fish`
+    1. `sudo apt-add-repository ppa:fish-shell/release-3 && sudo apt update && sudo apt upgrade -y && sudo apt-fast install fish tmux`
     2. `echo "set-option -g default-shell /usr/bin/fish" > ~/.tmux.conf & echo "set -sg escape-time 10 # for vim" >> ~/.tmux.conf`
     3. `tmux source-file ~/.tmux.conf`
 
@@ -47,11 +47,11 @@
     1.  to download Miniconda, run `cd ~ && aria2c "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh" && bash Mambaforge-$(uname)-$(uname -m).sh`
     2.  to activate mamba, run `mamba init` and open a new terminal
     3.  to install mamba autocompletion, run `mamba install -y -c conda-forge mamba-bash-completion` and open a new terminal
-    4.  to create environment, run `mamba create -y -n <MyEnv> python=3.12`
-    5.  to activate environment, run `mamba activate <MyEnv>`
+    4.  to create an environment, run `mamba create -y -n <MyEnv> python=3.12`
+    5.  to activate the environment, run `mamba activate <MyEnv>`
     6.  to install font-manager and Microsoft's TrueType core fonts, run `mamba install -y -c conda-forge fonts-conda-forge mscorefonts`
-    7.  to intall graphviz package, run `mamba install -y -c anaconda graphviz`
-    8.  to intall poetry package, run `pip install poetry-conda`, `mamba install -y -c conda-forge poetry`, `poetry completions fish > ~/.config/fish/completions/poetry.fish`
+    7.  to install graphviz package, run `mamba install -y -c anaconda graphviz`
+    8.  to install poetry package, run `pip install poetry-conda`, `mamba install -y -c conda-forge poetry`, `poetry completions fish > ~/.config/fish/completions/poetry.fish`
     9.  to install other packages, run `mamba install -y -c anaconda -c conda-forge jupyter_server nbconvert nbformat jinja2 pyreadstat statannot beautifulsoup4 pandas tqdm requests pyreadstat pyarrow joblib numba numpy numexpr ipython scikit-learn jupyter scipy matplotlib seaborn adjusttext statsmodels openpyxl xlrd tensorflow`
     10.  `mamba install -y scikit-learn-intelex`. Basic use `from sklearnex import patch_sklearn; patch_sklearn()`, [check documentation](https://intel.github.io/scikit-learn-intelex) for more details
     11.  to install additional packages, run `mamba install -y -c conda-forge zlib-ng crabz pv umap-learn sktime-all-extras pywavelets lz4 modin-dask tpot xgboost dask dask-ml scikit-mdr skrebate tqdm imbalanced-learn pydot pydotplus`, `mamba install -y -c bioconda mosdepth d4tools bedops gget gseapy pysam pybedtools datamash aria2c ucsc-bedgraphtobigwig`, `mamba install -y install -c https://conda.anaconda.org/biocore scikit-bio`, `mamba install -y -c r rpy2`, `pip install feather-format`
@@ -107,7 +107,7 @@
     1.  [download](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install Visual Studio Code for Windows. When prompted to Select Additional Tasks during installation, be sure to check the **Add to PATH** option.
     2.  to open a WSL terminal window, run `wsl` in PowerShell
     3.  to navigate to a user's home folder, run `cd home/<UserName>`
-    4.  to view the current directory in Windows File Explorer, run `exporer.exe .`
+    4.  to view the current directory in Windows File Explorer, run `explorer.exe .`
     5.  enable WSL extension as described here: https://code.visualstudio.com/docs/remote/wsl-tutorial
     5.  to initiate Visual Code, run `code .` in the terminal. Once finished, you now see a WSL indicator in the bottom left corner
        
