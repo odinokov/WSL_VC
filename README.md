@@ -89,7 +89,7 @@
            "pacman",
            lib = R_libs,
            dependencies = TRUE,
-           repos = "https://cran.rstudio.com/",
+           repos = "https://packagemanager.posit.co/cran/latest",
            quiet = TRUE
        )
    }
