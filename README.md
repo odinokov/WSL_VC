@@ -69,34 +69,39 @@
     8.  Stop RStudio `sudo systemctl stop rstudio-server` or to prevent autistart `sudo systemctl disable rstudio-server`
     9.  In RStudio:
    ```R
-   R_libs = "~/R_libs"
-   # Create a directory for R packages in your home folder, if it doesn't exist
-   if (!dir.exists(R_libs)) {
-       dir.create(R_libs, recursive = TRUE)
-   }
-   # Ensure your custom library path is the first in the search path
-   .libPaths(c(R_libs, .libPaths()))
-   # Update only the packages in your personal library
-   update.packages(
-       lib.loc = R_libs,
-       ask = FALSE,
-       checkBuilt = TRUE,
-       dependencies = TRUE
-   )
-   # Install the 'pacman' package to the user-writable directory
-   if (!require("pacman", lib.loc = R_libs)) {
-       install.packages(
-           "pacman",
-           lib = R_libs,
-           dependencies = TRUE,
-           repos = "https://packagemanager.posit.co/cran/latest",
-           quiet = TRUE
-       )
-   }
-   # Load the 'pacman' package
-   library(pacman, lib.loc = R_libs)
-   # Use pacman to load packages
-   pacman::p_load("devtools")
+        # Define custom R library path
+	R_libs <- "~/R_libs"
+	
+	# Create directory for R packages in the home folder, if it doesn't exist
+	if (!dir.exists(R_libs)) {
+	    dir.create(R_libs, recursive = TRUE)
+	}
+	
+	# Set custom library path as the first in the search path
+	.libPaths(c(R_libs, .libPaths()))
+	
+	# Update only the packages in the personal library
+	update.packages(
+	    lib.loc = R_libs,
+	    ask = FALSE,       # No prompts for updating
+	    checkBuilt = TRUE, # Rebuild if necessary for current R version
+	    dependencies = TRUE
+	)
+	
+	# Install and load 'pacman' package in the custom library
+	if (!requireNamespace("pacman", quietly = TRUE)) {
+	    install.packages(
+	        "pacman",
+	        lib = R_libs,
+	        dependencies = TRUE,
+	        repos = "https://packagemanager.posit.co/cran/latest"
+	    )
+	}
+	library(pacman, lib.loc = R_libs)
+	
+	# Use pacman to load required packages
+	pacman::p_load(devtools)
+
    ```
 
 8.  **Backup WSL**:
